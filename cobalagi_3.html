@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Data Mahasiswa UGM</title>
+</head>
+<style>
+    body {
+        background: #f1f1f1;
+    }
+    .container{
+        background: #ffffff;
+        width:360px;
+        height: 330px;
+        margin:222px auto 0;
+        border-radius:10px;
+        min-height:256px;
+        overflow:hidden;
+        box-shadow: 0 1px 3px black;
+    }
+    div.login{
+        background: #2e3e4e;
+        padding: 10px 22px;
+        height: 60px;
+    }
+    .judul{
+        color:#859db3;
+        font-family: helvetica;
+    }
+    div.artikel{
+        padding:10px 22px 0;
+        color:#808080;
+        line-height: 26px;
+        width: 350px;
+        padding 40px 20px;
+    }
+    input{
+        width: 100%;
+        text-align: center;
+        color: white;
+        padding: 10px;
+        border radius: 7px;
+    }
+    .tombol_submit{
+        background: #66bd78;
+        font-family: helvetica;
+        width: 100%;
+        border-radius:10px;
+        padding: 10px 20px;
+        color: white;
+        font-size:12pt;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="login">
+            <div class="header"></div>
+            <center><h2 class="judul">Data Mahasiswa UGM</h2></center>
+        </div>
+        <div class="artikel">
+        <form name="myForm" method="post">
+                    <div class="grub">
+                <label>Nama Lengkap:</label><br>
+                <input type="text" name="nama" id="nama"/><br>
+            </div>
+            <div class="grub">
+                <label>Semester:</label><br>
+                <input type="number" name="semester" id="semester"/><br>
+            </div>
+                <button type="button"onclick="myFunction()"class="tombol_submit">Submit</button>
+        </form>
+    </div>
+</div>
+<p id="demo"></p>
+
+<script>
+    function myFunction() {
+       let x = document.forms["myForm"]["nama"].value;
+       if (x=="") {
+        alert("ISIKAN NAMA!");
+        return false;
+       }
+       let y = document.forms["myForm"]["semester"].value;
+       if (y=="") {
+        alert("ISIKAN SEMESTER!");
+        return false;
+       }
+       let z = document.forms["myForm"]["semester"].value;
+            if (z<3) {
+              alert("Anda mahasiswa tahun pertama, Mahasiswa Baru!");
+              return false;
+             } if (z<5) {
+               alert("Anda mahasiswa Tahun Kedua,Semangat!");
+               return false;
+             } if (z<7){
+               alert("Anda mahasiswa Tahun Ketiga,Tetap Semangat!");
+               return false;
+             } if (z<9){
+               alert("Anda mahasiswa tahun keempat, Lulus Tahun Ini!");
+               return false;
+             } else {
+                alert("Anda Bukan Mahasiswa Universitas Ini!");
+                return false;
+            }
+}
+</script>
+</body>
+</html>
